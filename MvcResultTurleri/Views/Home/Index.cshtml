@@ -1,0 +1,29 @@
+﻿<script src="~/Scripts/jquery-3.6.4.min.js"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <input type="button" value="Veri Getir" id="btnVeri" />
+
+</div>
+
+<script>
+    $("#btnVeri").click(function () {
+
+        $.ajax({
+            type: "Get",
+            url: "/Home/Index3",
+            success: function (sonuc) {
+                alert(sonuc.Id);
+                alert(sonuc.Adi);
+                alert(sonuc.Fiyati);
+                alert(sonuc.Aciklama);
+
+            }
+        })
+    })
+
+</script>

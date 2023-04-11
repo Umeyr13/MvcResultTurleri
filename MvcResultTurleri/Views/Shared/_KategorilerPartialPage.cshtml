@@ -1,0 +1,19 @@
+﻿@{ 
+    List<string> kategoriler = new List<string>()
+    {
+        "Teknoloji","Giyim","Gıda","Temizlik"
+    };
+
+
+}
+
+
+<ul>
+    @foreach (var item in kategoriler)
+    {
+        <li>
+            <a href="/Home/Kategoriler?ad=@item ">@item</a>
+        </li>
+
+    }
+</ul>

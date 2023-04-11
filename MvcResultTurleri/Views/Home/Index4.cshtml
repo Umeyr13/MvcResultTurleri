@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index4";
+}
+
+<h2>Index4</h2>
+
+
+<script>// alert("Merhaba Dünya") //Bu mesajı action ile de yazdıra biliriz.</script>
+<script src="/Home/Mesaj"></script>
+
+
+<div>
+    @using(Html.BeginForm())
+            {
+                @Html.TextBox("ad"," ",new {placeholder = "Adınız"}) //parametre deki isimler ile aynı olmalı
+                @Html.TextBox("Soyad"," ",new  {placeholder = "Soyadınız" })
+                <hr />  
+                <button type="submit">Kaydet</button>
+
+
+                <div>
+                    <hr />
+                </div>
+                <div>
+                        @if (ViewBag.liste != null)
+                        {
+                            <ul>
+                                @foreach (string item in (List<string>)ViewBag.liste)
+                                {
+                                    <li>
+                                        @item;
+                                    </li>
+                                }
+                            </ul>
+
+                        }
+
+                </div>
+            }
+</div>
+<br />
+<div>
+    <hr />
+</div>
+<div>
+    <input type="button" value="Mesaj ver" onabort="" onclick="button_click();" />
+</div>
+<script src="/Home/ButtonMesaj"></script>

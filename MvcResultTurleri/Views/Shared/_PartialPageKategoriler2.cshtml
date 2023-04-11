@@ -1,0 +1,12 @@
+﻿@model List<string>
+
+<ul>
+    
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Home/Kategoriler?ad=@item">@item</a>
+            </li>
+        }
+    
+</ul>
